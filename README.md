@@ -16,6 +16,7 @@ Prerequsites:
 
 2) Run commands
 npm i -g nx 
+<br>
 npm i
 
 3) Launch app
