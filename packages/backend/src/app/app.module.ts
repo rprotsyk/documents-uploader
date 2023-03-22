@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DocumentsModule } from './documents/documents.module';
+import { Document } from './documents/document.entity';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { DocumentsModule } from './documents/documents.module';
       password: 'postgres',
       database: 'documents',
       synchronize: true,
+      entities: [Document],
     }),
     DocumentsModule,
   ],
