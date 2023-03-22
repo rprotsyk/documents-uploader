@@ -14,7 +14,8 @@ Prerequsites:
     <br />
     password: process.env.DB_PASSWORD || 'postgres',
 
-2) Run commands
+2) Run commands:
+    <br>
     npm i -g nx 
     <br>
     npm i
