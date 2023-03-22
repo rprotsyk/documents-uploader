@@ -20,10 +20,11 @@ Prerequsites:
     npm i
     <br>
 
-3) Launch app
+3) Launch app:
     <br>
     nx serve backend
     <br>
     nx serve client
+    <br>
 
 4) Navigate to http://localhost:4200
