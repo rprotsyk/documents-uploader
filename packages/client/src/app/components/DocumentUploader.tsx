@@ -41,7 +41,7 @@ const DocumentUploader: React.FC = () => {
       if (url) {
         formData.append('url', url);
       }
-      await axios.post('/api/documents', formData);
+      await axios.post('http://localhost:3333/api/documents', formData);
       setFile(null);
       setUrl('');
       setError('');

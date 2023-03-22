@@ -17,7 +17,7 @@ const DocumentList: React.FC = () => {
 
   const handleDelete = async (id: number) => {
     try {
-      await axios.delete(`/api/documents/${id}`);
+      await axios.delete(`http://localhost:3333/api/documents/${id}`);
       setDocuments(documents.filter((document) => document.id !== id));
     } catch (error) {
       console.error(error);
@@ -27,7 +27,7 @@ const DocumentList: React.FC = () => {
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
-        const response = await axios.get<Document[]>('/api/documents');
+        const response = await axios.get<Document[]>('http://localhost:3333/api/documents');
         setDocuments(response.data);
       } catch (error) {
         console.error(error);
