@@ -21,6 +21,7 @@ Prerequsites:
     <br>
 
 3) Launch app
+    <br>
     nx serve backend
     <br>
     nx serve client
