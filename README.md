@@ -2,17 +2,17 @@
 Prerequsites:
 1) Install PostgreSQL
 
-Set your DB connection properties:
-<br />
-type: 'postgres',
-<br />
-host: process.env.DB_HOST || 'localhost',
-<br />
-port: process.env.DB_PORT || 5433,
-<br />
-username: process.env.DB_USERNAME || 'postgres',
-<br />
-password: process.env.DB_PASSWORD || 'postgres',
+    Set your DB connection properties:
+    <br />
+    type: 'postgres',
+    <br />
+    host: process.env.DB_HOST || 'localhost',
+    <br />
+    port: process.env.DB_PORT || 5433,
+    <br />
+    username: process.env.DB_USERNAME || 'postgres',
+    <br />
+    password: process.env.DB_PASSWORD || 'postgres',
 
 2) Run commands
 npm i -g nx 
