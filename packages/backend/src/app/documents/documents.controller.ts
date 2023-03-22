@@ -1,4 +1,4 @@
-import { Controller, Post, UseInterceptors, UploadedFile, Body, HttpException, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Delete, Get, Param, UseInterceptors, UploadedFile, Body, HttpException, HttpStatus } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -8,6 +8,16 @@ import { Document } from './document.entity';
 @Controller('documents')
 export class DocumentsController {
   constructor(@InjectRepository(Document) private documentsRepository: Repository<Document>) {}
+
+  @Get()
+  async findAll(): Promise<Document[]> {
+    return this.documentsRepository.find();
+  }
+
+  @Delete(':id')
+  async delete(@Param('id') id: string): Promise<void> {
+    await this.documentsRepository.delete(id);
+  }
 
   @Post()
   @UseInterceptors(FileInterceptor('file'))
